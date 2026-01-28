@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 const cards = <Map<String, dynamic>>[
@@ -169,8 +167,6 @@ class _CardType4 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
-
     return Card(
       clipBehavior: .hardEdge,
       elevation: elevation,

@@ -6,6 +6,28 @@ class UiControllsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(title: const Text('UI Controls')),
+      body: _UiControlsListView(),
+    );
+  }
+}
+
+class _UiControlsListView extends StatelessWidget {
+  const _UiControlsListView();
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      physics: const ClampingScrollPhysics(),
+      children: [
+        SwitchListTile(
+          title: const Text('Developer mode'),
+          subtitle: const Text('Aditional controls'),
+          value: true,
+          onChanged: (value) {},
+        ),
+      ],
+    );
   }
 }
